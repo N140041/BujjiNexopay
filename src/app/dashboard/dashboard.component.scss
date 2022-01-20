@@ -1,0 +1,49 @@
+.cover{
+    background-image: linear-gradient(to right, #ff5400, #ffa700);
+    height: 130px;
+    border-radius: 0 0 0 50px;
+    .school{
+        display: flex;
+        align-items: center;
+        color: #ffffffcc;
+        font-weight: 500;
+    }
+    .dp{
+        height: 50px;
+        width: 50px;
+        border: #ffffff;
+        border-style: solid;
+        border-radius: 50px;
+        margin: 20px;
+    }
+}
+.profile-card{
+    position:absolute;
+    z-index: 1;
+    width: 100%;
+}
+.profile{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    width: 80%;
+    box-shadow: 2px 2px 5px grey;
+    border-radius: 15px;
+    margin: -30px 0 0 30px;
+}
+.dp{
+    height: 70px;
+    width: 70px;
+    border: #ffffff;
+    box-shadow: 2px 2px 5px grey;
+    border-style: solid;
+    border-radius: 50px;
+    margin: 5px;
+}
+.fee{
+    background-image: linear-gradient(to bottom, #da00ff, #1b00ffa6);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 5px;
+}

@@ -1,0 +1,84 @@
+<!-- Dashboard -->
+<div class="cover">
+    <div class="school">
+        <img class="dp" src="assets\my_photo.jpg" alt="">
+        <div>ZPHS Golzam</div>
+    </div>
+</div>
+
+<div class="profile-card">
+    <div class="profile">
+        <img class="dp" src="assets\my_photo.jpg" alt="">
+        <div style="margin-left: 5px;">
+            <div>Bujji Dammu</div>
+            <div style="color: gray;">Front-end Developer</div>
+        </div>
+    </div>
+    <div class="fee">
+
+        <div style="display: flex; align-items: center;justify-content: space-between; margin: 10px; color: aliceblue;">
+            <p style="font-size: 20px;font-weight: 700;">Now pay your <br> fee monthly with @</p>
+            <img style="height: 30px; width: 30px; border-radius: 50px;" src="assets\ok1.png" alt="">
+        </div>
+
+        <div style="display: flex; align-items: center; margin: 10px; color: aliceblue;">
+            <div style="font-size: 60px;"><b>0%</b></div>
+            <div style="font-size: 15px; font-weight: 600;margin-left: 5px;">Interest <br> pre-approved credit line</div>
+        </div>
+
+        <div style="display: flex; align-items: center; margin: 10px;justify-content: space-between;">
+            <div style="color: aliceblue;">
+                <p style="font-weight: 600; font-size: 15px;">Annual fee</p>
+                <div style="font-size: 30px;white-space: nowrap ;"><b>&#x20B9; 3,40,000</b></div>
+            </div>
+            <button class="button is-normal" style="border-radius: 30px;font-weight: 700; font-weight: 700;" (click)="showDialog()" >Activate Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Dialog -->
+<div class="modal"[ngClass]="{'is-active':showForm === true}">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Please enter your details below</p>
+        <button class="delete" aria-label="close" (click) = "close()"></button>
+      </header>
+      <section class="modal-card-body">      
+          <div class="field">
+            <label class="label">Phone Number</label>
+            <div class="control has-icons-right">
+              <input class="input" [(ngModel)]="phnNumber" (input)="phnNumChange($event)" placeholder="Phonenumber input">
+              <span class="icon is-small is-right">
+                <img *ngIf = "phnValidations" style="height: 30px; width: 30px; border-radius: 50px;" src="assets\ok2.png" alt="">
+              </span>
+            </div>
+          </div>
+          <div class="field"> 
+            <label class="label">PAN Card Number</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="PAN Card input">
+            </div>
+          </div>
+          <div class="field"> 
+            <label class="label">Name as in PAN Card</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Name input">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-right">
+              <input class="input" type="email" (input)="emailChange($event)" placeholder="Email input">
+              <span class="icon is-small is-right">
+                <img *ngIf = "emailValidations" style="height: 30px; width: 30px; border-radius: 50px;" src="assets\ok2.png" alt="">
+              </span>
+            </div>
+          </div>
+      </section>
+      <footer class="modal-card-foot" style="justify-content: space-around;">
+        <button class="button" (click) = "close()">Cancel</button>
+        <button class="button is-success" (click) = "close()">Activate Now</button>
+      </footer>
+    </div>
+  </div>
